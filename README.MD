@@ -6,7 +6,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/Yuhtin/react-covid-tracker.svg)](https://github.com/Yuhtin/react-covid-tracker/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues-raw/Yuhtin/react-covid-tracker.svg?label=issues)](https://github.com/Yuhtin/react-covid-tracker/issues)
 [![GitHub last commit](https://img.shields.io/github/last-commit/Yuhtin/react-covid-tracker.svg)](https://github.com/Yuhtin/react-covid-tracker/commit)
-[![MIT License](https://img.shields.io/badge/license-AGPLV3-blue.svg?color=1bcc1b)](https://choosealicense.com/licenses/agpl-3.0/)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?color=1bcc1b)](https://choosealicense.com/licenses/mit/)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 This is a app for view the covid-19 cases and deaths in all countries.
@@ -14,8 +14,8 @@ This is a app for view the covid-19 cases and deaths in all countries.
 See more information of this application on this discord server:
 <td align="center"><a href="https://discord.gg/ShpKBgk"> <img src="https://invidget.switchblade.xyz/ShpKBgk">
 
-## Images
-Coming soon
+## Showcase
+[![Video](https://media.giphy.com/media/ahE5gPOxqNtf0ielq4/giphy.gif)](https://youtu.be/iy9iKOLkLhc)
 
 ## Contributors
 <table>
