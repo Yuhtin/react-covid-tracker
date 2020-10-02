@@ -4,8 +4,8 @@ export default class CountrySchema {
     primaryKey: 'id',
     properties: {
       id: {type: 'string', indexed: true},
-      name: 'string',
       cases: 'int',
+      todayCases: 'int',
       deaths: 'int',
       recovered: 'int',
       casesPerMillion: 'int',

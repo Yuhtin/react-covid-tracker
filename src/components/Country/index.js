@@ -16,12 +16,16 @@ import {
 } from './styles';
 
 const Country = ({data, onRefresh}) => {
+  const casesPerDay =
+    data.todayCases === 0 ? '' : data.todayCases + ' casos por dia e ';
+
   return (
     <Container>
-      <Name>{data.name}</Name>
+      <Name>{data.id}</Name>
       <Description>
-        O {data.name} tem {Numeral(data.casesPerMillion).format('0,0')} casos a
-        cada 1 milhão de pessoas
+        O {data.id} tem {casesPerDay}
+        {Numeral(data.casesPerMillion).format('0,0')} casos a cada 1 milhão de
+        pessoas
       </Description>
       <Stats>
         <Stat>

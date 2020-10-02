@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import {Container, Title, Form, Input, Submit, List} from './styles';
-import api from '~/services/api';
-import getRealm from '~/services/realm';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import Country from '~/components/Country';
+import getRealm from '~/services/realm';
 import {Keyboard} from 'react-native';
+import api from '~/services/api';
+
 const Main = () => {
   const [input, setInput] = useState('');
   const [error, setError] = useState(false);
@@ -23,7 +24,7 @@ const Main = () => {
   async function saveCountry(country) {
     const data = {
       id: country.country,
-      name: country.country,
+      todayCases: country.todayCases,
       deaths: country.deaths,
       recovered: country.recovered,
       casesPerMillion: country.casesPerOneMillion,
@@ -33,29 +34,34 @@ const Main = () => {
     const realm = await getRealm();
 
     realm.write(() => {
+      realm.delete;
       realm.create('Country', data, 'modified');
     });
 
+    setCountries();
     return data;
   }
 
   async function handleAddCountry() {
     try {
       const response = await api.get(`/countries/${input}`);
-
       await saveCountry(response.data);
 
       setInput('');
       setError(false);
       Keyboard.dismiss();
+
+      const realm = await getRealm();
+      const data = realm.objects('Country').sorted('cases', true);
+
+      setCountries(data);
     } catch (err) {
       setError(true);
     }
   }
 
   async function handleRefreshCountry(country) {
-    const response = await api.get(`/countries/${country.fullName}`);
-
+    const response = await api.get(`/countries/${country.id}`);
     const data = await saveCountry(response.data);
 
     setCountries(
