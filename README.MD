@@ -11,9 +11,6 @@
 
 This is a app for view the covid-19 cases and deaths in all countries.
 
-See more information of this application on this discord server:
-<td align="center"><a href="https://discord.gg/ShpKBgk"> <img src="https://invidget.switchblade.xyz/ShpKBgk">
-
 ## Showcase
 [![Video](https://media.giphy.com/media/ahE5gPOxqNtf0ielq4/giphy.gif)](https://youtu.be/iy9iKOLkLhc)
 
